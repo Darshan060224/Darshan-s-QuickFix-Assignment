@@ -1,1 +1,4 @@
 Quickfix
+Basic Details
+Job Card
+Part Usage Entry & Service Invoice
