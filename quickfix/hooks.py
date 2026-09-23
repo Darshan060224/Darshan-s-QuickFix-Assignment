@@ -256,3 +256,27 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+fixtures = [
+    {
+        "dt": "Role",
+        "filters": [
+            ["name", "in", [
+                "QF Service Staff",
+                "QF Technician",
+                "QF Manager"
+            ]]
+        ]
+    }
+]
+permission_query_conditions = {
+    "Job Card": "quickfix.permissions.job_card_query"
+}
+after_install = "quickfix.install.after_install"
+
+doc_events = {
+    "*": {
+        "on_update": "quickfix.audit.log_change",
+        "on_submit": "quickfix.audit.log_change",
+        "on_cancel": "quickfix.audit.log_change",
+    }
+}
