@@ -1,5 +1,7 @@
 import frappe
 def log_change(doc, method):
+    if doc.doctype == "Audit Log":
+        return
     audit = frappe.get_doc({
         "doctype": "Audit Log",
         "doctype_name": doc.doctype,

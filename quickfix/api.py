@@ -71,3 +71,19 @@ def share_job_card(job_card_name, user_email):
         user=user_email,
         read=1,
     )
+    
+@frappe.whitelist(allow_guest=True)
+def get_job_summary():
+    job_card_name = frappe.form_dict.get("job_card_name")
+    if not job_card_name or not frappe.db.exists("Job Card", job_card_name):
+        frappe.local.response["http_status_code"] = 404
+        return {"Not found"}
+    job = frappe.get_doc("Job Card", job_card_name)
+    summary = {
+        "name": job.name,
+        "customer_name": job.customer_name,
+        "status": job.status,
+        "final_amount": job.final_amount
+    }
+    return summary
+    

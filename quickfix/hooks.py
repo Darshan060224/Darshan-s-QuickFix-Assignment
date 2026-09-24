@@ -280,3 +280,6 @@ doc_events = {
         "on_cancel": "quickfix.audit.log_change",
     }
 }
+scheduler_events={
+    "daily":["quickfix.tasks.check_low_stock"]
+}

@@ -52,3 +52,6 @@ class JobCard(Document):
 	def on_trash(self):
 		if self.status not in ["Cancelled","Draft"]:
 			frappe.throw("Job Card cannot be trashed.")
+
+	def before_print(self, print_settings=None):
+		self.print_summary = f"{self.customer_name or ''}, {self.device_brand or ''}, {self.device_model or ''}"		
