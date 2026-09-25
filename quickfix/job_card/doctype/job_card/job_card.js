@@ -84,6 +84,11 @@ frappe.ui.form.on("Job Card", {
 			}
 		});
 	},
+	refresh(frm) {
+		if (!frappe.user.has_role("QF Manager")) {
+			frappe.set_df_property("customer_phone","hidden",1);
+		}
+	},
 });
 
 frappe.ui.form.on("Part Usage Entry", {

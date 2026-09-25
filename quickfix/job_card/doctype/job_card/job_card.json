@@ -32,7 +32,9 @@
   "delivery_date",
   "remarks",
   "status",
-  "amended_from"
+  "amended_from",
+  "testing_section",
+  "qa_check"
  ],
  "fields": [
   {
@@ -197,13 +199,24 @@
    "options": "JC-.YYYY.-.#####",
    "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "testing_section",
+   "fieldtype": "Section Break",
+   "label": "Testing"
+  },
+  {
+   "fieldname": "qa_check",
+   "fieldtype": "Link",
+   "label": "QA Check",
+   "options": "QA Check"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-09-22 18:29:54.196842",
+ "modified": "2026-09-25 14:54:50.298061",
  "modified_by": "Administrator",
  "module": "Job Card",
  "name": "Job Card",

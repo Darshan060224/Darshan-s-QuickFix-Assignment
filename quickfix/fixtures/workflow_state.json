@@ -1,0 +1,92 @@
+[
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "question-sign",
+    "modified": "2026-09-22 14:43:18.674485",
+    "name": "Pending",
+    "style": "",
+    "workflow_state_name": "Pending"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "ok-sign",
+    "modified": "2026-09-22 14:45:18.676508",
+    "name": "Approved",
+    "style": "Success",
+    "workflow_state_name": "Approved"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "remove",
+    "modified": "2026-09-22 14:46:18.677631",
+    "name": "Rejected",
+    "style": "Danger",
+    "workflow_state_name": "Rejected"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "",
+    "modified": "2026-09-25 10:58:44.958992",
+    "name": "Draft",
+    "style": "",
+    "workflow_state_name": "Draft"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "",
+    "modified": "2026-09-25 10:59:58.704902",
+    "name": "In Repair",
+    "style": "",
+    "workflow_state_name": "In Repair"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "",
+    "modified": "2026-09-25 11:02:06.191111",
+    "name": "Pending Diagnosis",
+    "style": "",
+    "workflow_state_name": "Pending Diagnosis"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "",
+    "modified": "2026-09-25 11:02:06.232187",
+    "name": "Awaiting Customer Approval",
+    "style": "",
+    "workflow_state_name": "Awaiting Customer Approval"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "",
+    "modified": "2026-09-25 11:02:06.290821",
+    "name": "Ready for Delivery",
+    "style": "",
+    "workflow_state_name": "Ready for Delivery"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "",
+    "modified": "2026-09-25 11:02:06.298899",
+    "name": "Delivered",
+    "style": "",
+    "workflow_state_name": "Delivered"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow State",
+    "icon": "",
+    "modified": "2026-09-25 11:02:06.307657",
+    "name": "Cancelled",
+    "style": "",
+    "workflow_state_name": "Cancelled"
+  }
+]

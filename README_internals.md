@@ -59,15 +59,33 @@ frappe.call is asynchronous one. Its result is available only after the callback
 
 # K2 — Spot the N+1
     the main is here is calling the get_doc() inside the loop is the main N+1 issue here instead of that we can use get_list()
+    code:
+    job_cards = frappe.get_all(
+    "Job Card",
+    fields=["name", "assigned_technician"]
+)
+
+technicians = frappe.get_all(
+    "Technician",
+    fields=["name", "technician_name", "phone"]
+)
+
+tech_map = {
+    tech.name: tech
+    for tech in technicians
+}
+
+for jc in job_cards:
+    tech = tech_map.get(jc.assigned_technician)
+
+    if tech:
+        print(tech.technician_name, tech.phone)
 
 # L1 — API Standard CRUD
-**Request:**
 ```bash
-curl -X GET "http://quickfix.local:8000/api/resource/Job%20Card/JC-2026-00001" \
+curl -X GET "http://127.0.0.1:8000/api/resource/Job%20Card/JC-2026-00001" \
      -H "Authorization: token <API_KEY>:<API_SECRET>"
 ```
-
-**Response:**
 ```json
 {
     "data": {
@@ -85,3 +103,7 @@ curl -X GET "http://quickfix.local:8000/api/resource/Job%20Card/JC-2026-00001" \
     }
 }
 ```
+
+# N1  ignore_permissions Audit & JS-Hiding Pitfall
+    Inside that validate function the ignore_permissions is used for retreving the details of the parts_used field even if the user does not have the permission to view the parts_used field it can view it because it is a system action
+    

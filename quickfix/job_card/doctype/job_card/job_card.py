@@ -11,6 +11,10 @@ class JobCard(Document):
 			frappe.throw("Enter the customer phone number correctly")
 		if self.status in ["In Repair", "Ready for Delivery", "Delivered"] and not self.assigned_technician:
 			frappe.throw("Assigned Technician is required for this status")
+		
+		if self.status == "Ready for Delivery":
+			if not frappe.db.exists("QA Check", {"job_card": self.name, "final_verdict": "Pass"}):
+				frappe.throw("do QA check")
 		self.parts_total = 0
 		for row in self.parts_used:
 			row.total_price = row.quantity * row.unit_price
@@ -23,7 +27,6 @@ class JobCard(Document):
 		for row in self.parts_used:
 			stock_qty=frappe.db.get_value("Spare Part",row.part,"stock_qty")
 			frappe.db.set_value("Spare Part",row.part,"stock_qty",stock_qty-row.quantity,ignore_permissions=True)
-				# System automatically deducts stock after Job Card submission,so bypassing the user's Spare Part permission is acceptable here.
 		invoice = frappe.get_doc({
 			"doctype": "Service Invoice",
 			"job_card": self.name,

@@ -1,0 +1,65 @@
+[
+  {
+    "docstatus": 0,
+    "doctype": "Workflow Action Master",
+    "modified": "2026-09-22 14:45:18.689475",
+    "name": "Approve",
+    "workflow_action_name": "Approve"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow Action Master",
+    "modified": "2026-09-22 14:45:18.691213",
+    "name": "Reject",
+    "workflow_action_name": "Reject"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow Action Master",
+    "modified": "2026-09-22 14:45:18.692053",
+    "name": "Review",
+    "workflow_action_name": "Review"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow Action Master",
+    "modified": "2026-09-25 10:59:43.456251",
+    "name": "Start Repair",
+    "workflow_action_name": "Start Repair"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow Action Master",
+    "modified": "2026-09-25 11:02:06.521448",
+    "name": "Send for Approval",
+    "workflow_action_name": "Send for Approval"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow Action Master",
+    "modified": "2026-09-25 11:14:06.528150",
+    "name": "Cancel",
+    "workflow_action_name": "Cancel"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow Action Master",
+    "modified": "2026-09-25 11:14:40.531901",
+    "name": "Deliver",
+    "workflow_action_name": "Deliver"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow Action Master",
+    "modified": "2026-09-25 11:15:06.534984",
+    "name": "Repair Complete",
+    "workflow_action_name": "Repair Complete"
+  },
+  {
+    "docstatus": 0,
+    "doctype": "Workflow Action Master",
+    "modified": "2026-09-25 11:16:06.537962",
+    "name": "Assign Technician",
+    "workflow_action_name": "Assign Technician"
+  }
+]
